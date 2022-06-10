@@ -1,0 +1,93 @@
+<!-- HTML for parts 1 & 2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Exercise</title>
+    <style>
+      :root{
+        --time1: 2s;
+        --time2: 3s
+      }
+      div {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+      }
+      .brown {
+        background-color: brown;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .purple {
+        background-color: purple;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .car1 {
+        background-color: #8c9c12;
+      }
+      .car2 {
+        background-color: #1da788;
+      }
+      .car1,
+      .car2 {
+        margin-left: 0;
+      }
+
+      .animate-car1{
+        animation: animate1 var(--time1) linear forwards;
+        animation-play-state: running;
+      }
+      @keyframes animate1 {
+        0%{
+          margin-left: 0;
+        }
+        100%{
+          margin-left: calc(100% - 50px);
+          /* margin-left: 90%; */
+        }        
+      }
+      .animate-car2{
+        animation: animate1 var(--time2) linear forwards;
+        animation-play-state: running;
+      }
+      @keyframes animate1 {
+        0%{
+          margin-left: 0;
+        }
+        100%{
+          margin-left: calc(100% - 50px);
+          /* margin-left: 90%; */
+        }        
+      }
+      /* .car1{
+        margin-left: 10%
+      } */
+    </style>
+    <script src="./event_exercises.js"></script>
+  </head>
+  <body>
+    <h1 id="change_heading">Change Me!</h1>
+    SELECTED COLOR: <span class="selected">None!</span>
+    <section>
+      <div class="brown"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+      <div class="yellow"></div>
+    </section>
+    <h2>Race!</h2>
+    <button id="raceButton">Start the race!</button>
+    <br />
+    <div class="car1" data-name="car 1"></div>
+    <br />
+    <div class="car2" data-name="car 2"></div>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>
